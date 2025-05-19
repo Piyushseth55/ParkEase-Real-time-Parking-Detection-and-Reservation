@@ -1,0 +1,363 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #fff5f2;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Everything Section */
+.everything {
+    background: url('/static/images/tables.jpg') center center/cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0; /* Gives space at top and bottom */
+}
+
+
+.dashboard-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+
+
+
+/* Footer Design */
+.custom-footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 20px 10px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    flex: 1 1 250px;
+    min-width: 240px;
+}
+
+.footer-section h4 {
+    color: #ff6600;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-section p {
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin-right: 12px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 26px;
+    height: 26px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Responsive: stack footer sections on small screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        max-width: 100%;
+    }
+
+    .social-icons a {
+        margin-right: 8px;
+    }
+}
+
+
+
+
+/* Navbar Customization */
+.navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f25a29;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: 100px;
+}
+@media (max-width: 768px) {
+    .navbar {
+      /*  flex-direction: column;
+        align-items: center;  */
+        height: auto;
+    }
+}
+.logo-container {
+    display: flex;
+    margin-left: 50px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+form {
+    margin: 0;
+}
+
+#price_calculator, #logoutButton {
+    
+    transition: background-color 0.3s;
+    font-size: 17px;
+    padding: 0.3em 1.5em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    background: #ffffff;
+    color: #f25a29;
+    border-radius: 4px;
+    margin-right: 20px;
+    height: 40px;
+}
+
+#price_calculator:hover, #logoutButton:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(60deg, rgb(255, 98, 30) 0%, rgb(234, 160, 128) 100%);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#price_calculator:active, #logoutButton:active{
+    transform: translate(0em, 0.2em);
+}
+
+.navbar form:last-child {
+    margin-right: 10px;
+}
+
+
+
+.buttons-container {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+.navbar {
+    justify-content: space-between;
+}
+
+
+
+h1 {
+    margin-bottom: 20px;
+    color: #f25a29;
+    font-weight: 300;
+    font-size: 28px;
+}
+
+.info-boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 20px; /* Added space between boxes */
+}
+
+.box {
+    width: 45%;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+.total-box {
+    background-color: #f25a29;
+}
+
+.available-box {
+    background-color: #f25a29;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#availableSpaces {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+#totalSpaces {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 30px;
+}
+
+button:hover {
+    background-color: rgb(241, 3, 23);
+}
+
+.booking-btn {
+    background-color: #f25a29;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.booking-btn:hover {
+    background-color: #FF4500;
+}
+
+.booking {
+    margin-top: 30px;
+}
+
+
+/* Footer Section Customization */
+
+footer {
+    margin-top: auto; /* Pushes footer to the bottom */
+    width: 100%; /* Ensure footer stretches across the entire page */
+}
+
+.footer .text-white{
+    color: #ffffff;
+    font-weight: lighter;
+}
+
+.bg-red {
+    background-color: #f25a29;
+}
+
+.footer .text-white:hover {
+    color: #ffffff; /* Change color on hover */
+}
+
+.footer .fab {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    color: #ffffff;
+}
+
+.footer .fab:hover {
+    color: #2e2d2d; /* Social media icon hover color */
+}
+
+.footer .f-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .f-container a {
+    text-decoration: none;
+}
+
+.footer .my-3 a {
+    margin: 0 10px;
+}
+
+.footer .my-3 a:hover {
+    color: #f5576c;
+}
+
+.footer p {
+    font-size: 0.9rem;
+}
+
+/* Add some space between the social media icons and the footer content */
+.footer .my-3 {
+    margin-top: 1rem;
+}
+
+

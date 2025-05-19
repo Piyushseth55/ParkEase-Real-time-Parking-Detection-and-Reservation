@@ -1,0 +1,50 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    .content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    .main-content {
+        width: 100%;
+    }
+    .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer {
+        font-size: 14px;
+    }
+}

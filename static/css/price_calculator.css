@@ -1,0 +1,423 @@
+html,body {
+    background-color: #fff5f2;
+    font-family: 'Roboto', sans-serif;
+    color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+.everything {
+    background: url('/static/images/tables.jpg') center center/cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0; /* Gives space at top and bottom */
+}
+
+/* Footer Design */
+.custom-footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 20px 10px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    flex: 1 1 250px;
+    min-width: 240px;
+}
+
+.footer-section h4 {
+    color: #ff6600;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-section p {
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin-right: 12px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 26px;
+    height: 26px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Responsive: stack footer sections on small screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        max-width: 100%;
+    }
+
+    .social-icons a {
+        margin-right: 8px;
+    }
+}
+
+/* footer end */
+
+
+
+
+.wrapper {
+    flex: 1; /* Push the footer to the bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.container {
+    margin-top: 100px;
+    max-width: 600px;
+}
+
+.card {
+    background: #f25a29;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 25px 30px;
+}
+
+.card-header {
+    background-color: #f25a29;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.slider-container span {
+    color: #ffffff;
+}
+
+
+/* Increase the size of the slider thumb */
+.form-range::-webkit-slider-thumb {
+    width: 20px; 
+    height: 20px; 
+    background-color: #fbdc8f; 
+    border-radius: 50%; 
+    border: 2px solid #fbdc8f; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-range::-webkit-slider-thumb:hover {
+    background-color: #f25a29; /* Change color on hover */
+}
+
+/* Firefox */
+.form-range::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    background-color: #00f0ff;
+    border-radius: 50%;
+    border: 2px solid #00b8d4;
+    cursor: pointer;
+}
+
+/* Internet Explorer */
+.form-range::-ms-thumb {
+    width: 30px;
+    height: 30px;
+    background-color: #00f0ff;
+    border-radius: 50%;
+    border: 2px solid #00b8d4;
+    cursor: pointer;
+}
+
+.form-range {
+    width: 100%;
+    height: 0.5pt;
+    background: #ffffff;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-range:focus {
+    background: #ffffff;
+}
+
+.slider-value {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.price-display {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.btn {
+    background-color: #fbdc8f;
+    color: #f25a29;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    transform: translateY(-3px);
+    color: #f25a29;
+}
+
+.icon {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.icon:hover {
+    color: #00b8d4;
+}
+
+.parking-type-btns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.btn-type {
+    width: 48%;
+    background-color: #ffffff;
+    color: #f25a29;
+    border: 1px solid #ffffff;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: none; /* Removed hover effect */
+}
+
+.selected-btn {
+    background-color: #fbdc8f;
+    color: #f25a29;
+    font-weight: bold;
+    border: 1px solid #f44336;
+}
+
+
+
+.navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f25a29;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: 80px;
+}
+@media (max-width: 768px) {
+    .navbar {
+      /*  flex-direction: column;
+        align-items: center;  */
+        height: auto;
+    }
+}
+
+
+.logo-container {
+    display: flex;
+    margin-left: 35px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 13px;
+}
+
+form {
+    margin: 0;
+}
+
+#backButton, #logoutButton {
+    
+    transition: background-color 0.3s;
+    font-size: 17px;
+    padding: 0.3em 1.5em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    background: #ffffff;
+    color: #f25a29;
+    border-radius: 4px;
+    margin-right: 20px;
+    height: 40px;
+}
+
+#backButton:hover, #logoutButton:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(60deg, rgb(255, 98, 30) 0%, rgb(234, 160, 128) 100%);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#backButton:active, #logoutButton:active{
+    transform: translate(0em, 0.2em);
+}
+
+.navbar form:last-child {
+    margin-right: 50px;
+}
+
+.navbar {
+    justify-content: space-between;
+}
+
+.buttons-container {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Footer Section Customization */
+
+.footer {
+    background-color: #f25a29;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+.footer .text-white{
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.bg-red {
+    background-color: #f25a29;
+}
+
+.footer .text-white:hover {
+    color: #ffffff; /* Change color on hover */
+}
+
+.footer .fab {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    color: #ffffff;
+}
+
+.footer .fab:hover {
+    color: #2e2d2d; /* Social media icon hover color */
+}
+
+.footer .f-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .f-container a {
+    text-decoration: none;
+}
+
+.footer .my-3 a {
+    margin: 0 10px;
+}
+
+.footer .my-3 a:hover {
+    color: #f5576c;
+}
+
+.footer p {
+    font-size: 0.9rem;
+}
+
+/* Add some space between the social media icons and the footer content */
+.footer .my-3 {
+    margin-top: 1rem;
+}
+
+

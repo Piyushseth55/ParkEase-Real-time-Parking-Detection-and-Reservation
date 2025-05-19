@@ -1,0 +1,278 @@
+/*
+body {
+    display: flex;
+    flex-direction: column;
+ /*   background: linear-gradient(to right, #f92500, #ff6347);  
+    color: #fff;   *
+    font-family: 'Arial', sans-serif;
+    overflow: auto;
+    min-height: 100vh;
+    margin: 0;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   /* background: url('https://www.svgrepo.com/show/191631/parking.svg') no-repeat left center;
+    background-size: 400px; *
+    background: url('/static/images/bg.jpg') center/cover no-repeat;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.payment-container {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+    padding: 30px;
+    color: #333;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+*/
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url('/static/images/tables.jpg') center/cover no-repeat;
+    font-family: 'Arial', sans-serif;
+    overflow: auto;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Removed body::before to eliminate translucent overlay */
+body::before {
+    content: none;
+}
+
+.payment-container {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+    padding: 30px;
+    color: #333;
+    margin: 0 auto;
+}
+
+
+
+
+.payment-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color : #f92500;
+    font-weight: bold;
+}
+
+
+/* From Uiverse.io  */ 
+.Btn {
+width: 130px;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: rgb(15, 15, 15);
+border: none;
+color: white;
+font-weight: 600;
+gap: 8px;
+cursor: pointer;
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+position: relative;
+overflow: hidden;
+transition-duration: .3s;
+}
+
+.svgIcon {
+width: 16px;
+}
+
+.svgIcon path {
+fill: white;
+}
+
+.Btn::before {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    left: -100%;
+    top: 0;
+    transition-duration: .3s;
+    mix-blend-mode: difference;
+}
+
+.Btn:hover::before {
+    transition-duration: .3s;
+    transform: translate(100%,-50%);
+    border-radius: 0;
+}
+
+.Btn:active {
+    transform: translate(5px,5px);
+    transition-duration: .3s;
+}
+.form-control:focus {
+    border-color: #f92500;
+    box-shadow: 0 0 0 0.2rem rgba(249, 37, 0, 0.25);
+}
+.form-check {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #f92500;
+}
+
+.form-check-input {
+    margin-left: auto;
+}
+
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-top: 20px;
+}
+.svg-container img {
+    max-width: 450px;
+    margin-top : 100px;
+    margin-left : 100px;
+}
+
+.payment-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.payment-container .amount-with-symbol {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.payment-container .rupee-symbol {
+    font-size: 1.5rem;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.payment-container input#amount {
+    padding-left: 30px; /* Space for the rupee symbol */
+}
+
+/*
+.back-btn {
+    background-color: #ffffff;
+    color: #f44336;
+    font-size: 14px;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 10;
+    width: auto;
+    transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+    .back-btn {
+        max-width:50%;
+        top: 20px;
+        left: 20px;
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+}
+*/
+/*
+.back-btn {
+    background-color: #ffffff;
+    color: #f44336;
+    font-size: 14px;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 10;
+    width: fit-content; /* key fix *
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    display: inline-block; /* ensure it doesn't behave like a block *
+}
+
+@media (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    .back-btn {
+        top: 20px;
+        left: 20px;
+        padding: 8px 20px;
+        font-size: 12px;
+        width: 50%;
+    }
+}
+*/
+
+.back-btn {
+    background-color: #ffffff;
+    color: #f44336;
+    font-size: 14px;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    z-index: 10;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .back-btn {
+        padding: 8px 20px;
+        font-size: 15px;
+    }
+}
+
+
+
+
+.back-btn:hover {
+    background-color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Customize buttons */
+.btn-secondary {
+    background-color: #f92500; /* Custom background color for button */
+    color: white; /* White text on the button */
+}
+
+.btn-secondary:hover {
+    background-color: #d81f00; /* Darker background on hover */
+}

@@ -1,0 +1,296 @@
+body{
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+/* Navbar CSS */
+.custom-navbar {
+    background-color: #ff7700 !important; /* Orange background */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+    position: relative;
+    z-index: 1000; /* Ensure it stays above other elements */   
+}
+
+.custom-navbar:hover {
+    background-color: #ff5500 !important; /* Slightly darker orange on hover */
+}
+
+.custom-navbar .nav-link,
+.custom-navbar .navbar-brand {
+    color: white !important; /* Text color */
+}
+
+.custom-navbar .nav-link:hover {
+    color: #ffd700 !important; /* Change text color on hover */
+}
+
+
+/* REAL TIME PARKING DETAILS */
+.full-bg-wrapper {
+    background: url('/static/images/bg.jpg') center center/cover no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding-top: 150px; /* Adjust this to the height of your navbar */
+    padding-bottom: 40px; /* Add space below content */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.translucent-container {
+    background: rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 1200px;
+}
+
+
+@media (max-width: 767.98px) {
+    .translucent-container {
+        padding: 1rem;
+    }
+
+    .video-container,
+    .info-container {
+        margin-top: 1rem;
+    }
+
+    .video-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .info-container .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-spacing {
+        margin-bottom: 1rem;
+        width: 100% !important;
+        max-width: 300px;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .circle {
+        width: 100px;
+        height: 100px;
+        font-size: 1.2rem;
+    }
+
+    .text-below {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+/* Responsive design for larger screens */
+
+
+/* BOOKING AND FILLING TABLE */
+.booking-bg-wrapper {
+    background-image: url('/static/images/tables.jpg'); /* Adjust path as needed */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding: 60px 0;
+}
+.booking-translucent1,
+.booking-translucent2 {
+    background-color: rgba(255, 255, 255, 0.8); /* Translucent white */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.booking-translucent1:hover,
+.booking-translucent2:hover {
+    background-color: rgba(255, 255, 255, 0.95); /* More opaque on hover */
+    transition: background-color 0.3s ease;
+}
+
+
+.heading {
+    font-weight: bold;
+    color: #ff6600;
+}
+
+
+
+/* Footer Design */
+.custom-footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 20px 10px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    flex: 1 1 250px;
+    min-width: 240px;
+}
+
+.footer-section h4 {
+    color: #ff6600;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-section p {
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin-right: 12px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 26px;
+    height: 26px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Responsive: stack footer sections on small screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        max-width: 100%;
+    }
+
+    .social-icons a {
+        margin-right: 8px;
+    }
+}
+
+
+
+/* logout */
+.logout-container {
+    display: flex; /* Use flexbox to align items */
+    justify-content: flex-end; /* Align the button to the right */
+    margin: 20px; /* Add margin around the container */
+}
+
+
+#logoutButton {
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    --bs-btn-font-size: 1rem;
+    --bs-btn-padding-y: .2rem;
+    --bs-btn-padding-x: 1.2rem;
+    background-color: #f25a29;
+    color: rgb(255, 255, 255);
+}
+
+#logoutButton:hover {
+    background-color: #dc3545; /* Darker red */
+    color: white; /* Text color on hover */
+}
+
+.circle {
+    width: 150px;  /* Circle diameter */
+    height: 150px; /* Circle diameter */
+    border-radius: 50%;
+    border: 5px solid #f25a29; /* Bootstrap primary color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px; /* Font size for the count */
+    position: relative;
+    margin: 20px auto; /* Center the circles */
+    background-color: white; /* Circle background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.text-below {
+    text-align: center;
+    font-size: 18px; /* Font size for the description */
+    margin-top: 10px; /* Space between circle and text */
+}
+
+.custom-header {
+    background-color: #f25a29;
+    color: rgb(255, 255, 255);
+
+}
+
+.heading {
+    color: #f25a29;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.card-spacing {
+    margin-left: 10px;
+}
+
+.btn.mybutton {
+    background-color: #f25a29;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+
+.btn.mybutton:hover {
+    background-color: #dc3545;
+    color: rgb(255, 255, 255);
+}
+
+/*.custom-footer {
+    background-color: #f1d6cd;
+    color: #ff0019;
+}*/

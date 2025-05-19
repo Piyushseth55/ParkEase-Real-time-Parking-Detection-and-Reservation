@@ -1,0 +1,683 @@
+/* Ensure the body and html elements take up the full viewport height */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    
+}
+/*
+body {
+    font-family: 'Arial', sans-serif;
+   /* background: url('/static/images/bg.jpg') center/cover no-repeat; *
+    margin: 0;
+    padding-top: 0px; /* space below navbar *
+    min-height: 100vh; /* allow full height *
+    overflow-x: hidden;
+}
+*/
+
+@media (max-width: 768px) {
+    body{
+      overflow-x: hidden;
+    }
+}
+
+
+/* About Us Section */
+/* About Us Section */
+#about {
+    background: linear-gradient(135deg, #ffffff, #fff3e6);
+    padding: 100px 40px;
+}
+
+.about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.about-image {
+    flex: 1 1 45%;
+    text-align: left;
+    padding-left: 0; /* Push image left */
+    margin-right: 20px;
+}
+
+.about-image img {
+    width: 150%;
+    max-width: 550px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 1 1 50%;
+}
+
+.about-text h2 {
+    font-size: 2.8rem;
+    color: #ff5500;
+    margin-bottom: 25px;
+    font-weight: 800;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.about-text h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background-color: #ff5500;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    border-radius: 5px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.9;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+@media (max-width: 650px) {
+    .about-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        margin-right: 0;
+        padding: 0;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: auto;  
+      /* width: 200%;
+        height: 300px;
+        max-width: 300px; /* Adjust as needed */
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Features Section */
+#features {
+    padding: 100px 0;
+    background-color: #fff7e6; /* Light orange background */
+}
+
+.shadow-heading {
+    font-size: 3rem;
+    color: #ff5500;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #ffe0cc;
+    letter-spacing: 1.2px;
+}
+
+.features-container {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.features-container h2 {
+    font-size: 2.8rem;
+    color: #ff7700; /* Orange heading */
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/*
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+*/
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*
+.feature-item {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 350px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+}
+*/
+
+/* Force 3 items per row on larger screens, then wrap next 2 */
+.feature-item {
+    flex: 1 1 calc(33.33% - 40px);
+    max-width: 350px;
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+
+.feature-item img {
+    width: 100%;
+    height: 250px; /* Increased height for better visibility */
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.feature-item h4 {
+    color: #ff7700;
+    font-size: 1.5rem;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.feature-item p {
+    color: #444;
+    font-size: 1rem;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* Hover Effects */
+.feature-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.feature-item img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+@media (max-width: 992px) {
+    .feature-item {
+        flex: 1 1 calc(45% - 40px);
+    }
+}
+
+/* Responsive: 1 item per row for small screens */
+@media (max-width: 576px) {
+    .feature-item {
+        flex: 1 1 100%;
+    }
+}
+
+
+
+
+/* Footer Design */
+.custom-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px 10px;
+    font-size: 15px;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .footer-section {
+    flex: 1 1 200px;
+    min-width: 220px;
+  }
+  
+  .footer-section h4 {
+    color: #ffa500;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .social-icons a {
+    margin-right: 10px;
+  }
+  
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s;
+  }
+  
+  .social-icons img:hover {
+    transform: scale(1.2);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    color: #aaa;
+  }
+
+
+
+/* Contact Us Section */
+#contact {
+    padding: 100px 20px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.contact-us {
+    background: url("/static/images/contact.jpg") no-repeat center center;
+    background-size: cover; /* Ensures the image covers the entire section */
+    width: 100%; /* Full viewport width */
+    min-height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevents horizontal scrolling */
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    max-width: 1000px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85); /* Light background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    left: -20px; /* Moves it slightly to the left */
+}
+
+.contact-details {
+    flex: 1;
+    color: black; /* Change text color for better visibility */
+    font-size: 1.2rem;
+    max-width: 40%;
+    padding: 20px;
+    position: relative;
+    top: -10px; /* Moves it slightly upward */
+}
+
+.contact-form {
+    flex: 1;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: none; /* Remove duplicate shadow */
+}
+ 
+  .contact-form input {
+    width: 90%;
+    max-width: 400px;
+    padding: 12px;
+    border: 2px solid #ff7700;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+ 
+  .contact-form h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: left;
+    margin-right: 30px; /* Shift more to the left */
+}
+
+  .contact-form button {
+    width: 90%;
+    max-width: 400px;
+    background-color: #ff7700;
+    color: white;
+    padding: 12px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  .contact-form button:hover {
+    background-color: #ff5500;
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 768px) {
+
+    #contact {
+    padding: 60px 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.contact-us {
+    background: url("/static/images/contact.jpg") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    padding: 60px 0;
+    box-sizing: border-box;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    max-width: 1000px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.88);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    height: auto;
+    margin-top: 20%;
+    align-items: flex-start;
+    flex-direction: column;
+    max-height: none;
+
+    box-sizing: border-box;
+}
+
+.contact-details {
+    flex: 1 1 300px;
+    color: black;
+    font-size: 1.1rem;
+    padding: 20px;
+    min-width: 260px;
+    box-sizing: border-box;
+}
+
+.contact-form {
+    flex: 1 1 300px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ff7700;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.contact-form h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+    width: 100%;
+}
+
+.contact-form button {
+    width: 100%;
+    background-color: #ff7700;
+    color: white;
+    padding: 12px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    box-sizing: border-box;
+}
+
+.contact-form button:hover {
+    background-color: #ff5500;
+    transform: scale(1.05);
+}
+
+
+    .contact-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .contact-details, .contact-form {
+      max-width: 100%;
+    }
+  }
+/* Contact Us Section End */  
+
+
+
+
+
+
+/* Main container to hold the left and right halves */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    padding-bottom: 20px;
+
+     /* Move slightly up and right */
+     transform: translate(5%, -5%);
+}
+
+.everything{
+    background: url('/static/images/bg.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Left half for the background image */
+.left-half {
+    flex: 1; /* Take up half of the screen */
+    background: url('/static/images/18310.jpg') no-repeat center; /* Background image */
+    background-size: 80%; /* Adjust size of the background image (50% of its original size) */
+    background-position: left center; /* Position the image to the left center */
+    height: 100%; /* Ensure it takes up the full height */
+    margin-left: 10%;
+}
+
+
+/* Right half for the form */
+.login-container {
+    flex: 1; /* Take up half of the screen */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    padding: 30px;
+    border-radius: 10px;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%; /* Center the form container vertically */
+    max-width: 400px; /* Set a fixed width for the form */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    position: relative; /* Keep the form above the background image */
+}
+
+/* Admin login button at top-right */
+.admin-login {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 100; /* Make sure it stays above the background */
+}
+
+.admin-btn {
+    position: absolute;
+    top: 60px;
+    right: 20px;    
+    /*max-width: 250px;   You can adjust this value */
+    width: 125px; /* Makes the button expand based on its container */
+    background-color: #f25a29;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    
+    border-radius: 20%;
+}
+
+.admin-btn:hover {
+    background-color: #FF4500;
+}
+
+.login-container h2 {
+    text-align: center; /* Center the heading */
+    color: #f25a29; /* Dark gray color for text */
+    font-size: 1.5em; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 20px; /* Space below the heading */
+    text-transform: uppercase; /* Transform text to uppercase */
+    letter-spacing: 1px; /* Increase space between letters */
+    position: relative; /* Allow pseudo-elements positioning */
+}
+
+/* Optional: Add an underline effect */
+.login-container h2::after {
+    content: ""; /* Empty content for the pseudo-element */
+    display: block; /* Make it a block element */
+    width: 50%; /* Width of the underline */
+    height: 4px; /* Height of the underline */
+    background-color: #FF6347; /* Underline color */
+    margin: 10px auto 0; /* Center it below the heading */
+    border-radius: 5px; /* Rounded corners for the underline */
+}
+
+
+.login-container label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 93%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.login-container .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #f25a29;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login-container label {
+    color: #f25a29;
+    font-weight: lighter;
+}
+
+.login-container .btn:hover {
+    background-color: #e99a50;
+}
+
+.login-container p {
+    text-align: center;
+    color: #777;
+}
+
+.login-container a {
+    color: #FF6347;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+
+/* Navbar CSS */
+.custom-navbar {
+    background-color: #ff7700 !important; /* Orange background */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+    position: relative;
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.custom-navbar:hover {
+    background-color: #ff5500 !important; /* Slightly darker orange on hover */
+}
+
+.custom-navbar .nav-link,
+.custom-navbar .navbar-brand {
+    color: white !important; /* Text color */
+}
+
+.custom-navbar .nav-link:hover {
+    color: #ffd700 !important; /* Change text color on hover */
+}

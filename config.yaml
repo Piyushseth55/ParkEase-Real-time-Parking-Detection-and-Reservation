@@ -1,0 +1,7 @@
+
+# classes
+names : ['Car', 'free']
+nc : 2
+
+train: E:\PKLot\PKLot\data\train\images # train images
+val:   E:\PKLot\PKLot\data\val\images  # val images
