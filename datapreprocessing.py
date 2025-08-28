@@ -486,7 +486,7 @@ for dataset in datasets:
 
 
 ################################################################################
-#   pocessing on labels
+#   pocessing on labels  - Normalization the coordinates
 ################################################################################
 
 def swap_first_digit(input_file, output_file):

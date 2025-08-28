@@ -150,7 +150,7 @@ def login() :
         user = get_user(username)
         
         if user and user.check_password(password_input):
-            login_user(user)
+            login_user(user)  # session
             return redirect(url_for('userdashboard'))
         else:
             flash("Username or Password is incorrect.")
@@ -313,7 +313,6 @@ def get_parking_data():
 @app.route('/parkspot')
 @login_required 
 def parkspot():
-     
     return render_template('parkingspot.html')
    
 @app.route('/bookslot')
