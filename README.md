@@ -88,13 +88,13 @@ Connect your Arduino to the PC and ensure appropriate sensor connections for rea
 ## Screenshots
 
 ### Login
-![Login](screenshots/login_page.png)
+![Login](screenshots/loginpage_2.png)
 
-### Signup
-![Signup](screenshots/signup_page.png)
+### Landing Page
+![Signup](screenshots/loginpage.png)
 
 ### Admin Login
-![Admin Login](screenshots/admin_login.png)
+![Admin Login](screenshots/admiin_login.png)
 
 ### Userdashboard
 ![Userdashboard](screenshots/userdashboard.png)
